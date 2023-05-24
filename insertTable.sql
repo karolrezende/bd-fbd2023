@@ -1,6 +1,6 @@
-/*QUERY DE INSERÇÃO DE DADOS NA TABELA */
-/*TABELA TECHNOLOGIES*/
-/*inserção de dados*/
+/*INSERÇÃO NAS TABELAS*/ 
+
+/* TABELA TECHNOLOGIES*/ 
 insert into technologies(nome, area) 
 values ("Java", "Back-end"),
 		("React", "Front-end"),
@@ -69,13 +69,37 @@ values("2021-12-30", "Windows", 1),
 select * 
 from developersInfo;
 
-
 /*TABELA PROJECTS*/
-insert into projects (nome, descript, repository, developerId)
-values ("Inteligência Artificial", "Tecnologia Inteligência humana", "https://www.ibm.com/watson/", 8),
+insert into projects(nome, descript, repository, developerId)
+values 
+	("Inteligência Artificial", "Tecnologia Inteligência humana", "https://www.ibm.com/watson/", 8),
 	("Blockchain", "Tecnologia de registro distribuído que permite a criação de um registro seguro de transações", "https://www.blockchain.com/", 4),
     ("Realidade Aumentada", "Tecnologia que permite a sobreposição de elementos virtuais ao mundo real", "https://www.unity.com/solutions/augmented-reality", 6),
 	("Internet das Coisas", "Tecnologia que permite a conexão de objetos físicos à internet", "https://www.intel.com.br/content/www/br/pt/internet-of-things/what-is-the-internet-of-things.html", 9),
-    ("Computação em Nuvem", "Tecnologia que permite o acesso remoto a recursos de computação, armazenamento e processamento de dados", "uashudahd.com", 10)
+    ("Computação em Nuvem", "Tecnologia que permite o acesso remoto a recursos de computação, armazenamento e processamento de dados", "uashudahd.com", 10),
+    ("Computação AI", "Tecnologia de computação", "https://aws.amazon.com/pt/what-is-cloud-computing/", 2),
+    ("Big Data", "Tecnologia que permite a coleta", "armazenamento e análise de grandes volumes de dados", 7),
+    ("Realidade Virtual", " que permite a criação de ambientes virtuais imersivos e interativos", "https://www.oculus.com/", 3),
+    ("Machine Learning", "Tecnologia que permite que sistemas computacionais aprendam e melhorem a partir de dados", "https://developers.google.com/machine-learning/crash-course/", 5),
+    ("Robótica", "Tecnologia que permite a criação e programação de robôs capazes de executar tarefas complexas", "https://www.bostondynamics.com/", 1);
+    
+/*selecao*/
+select * from projects;
 
-
+/*TABELA PROJECTSTECHNOLOGIES*/
+INSERT INTO projectsTechnologies (addIn, technologyId, projectId)
+VALUES 
+    ('2021-10-01', 5, 7),
+    ('2021-10-02', 8, 4),
+    ('2021-10-03', 2, 9),
+    ('2021-10-04', 1, 6),
+    ('2021-10-05', 10, 3),
+    ('2021-10-06', 7, 1),
+    ('2021-10-07', 3, 8),
+    ('2021-10-08', 6, 2),
+    ('2021-10-09', 9, 5),
+    ('2021-10-10', 4, 10);
+    
+/*selecao*/
+select * from projectsTechnologies;
+    

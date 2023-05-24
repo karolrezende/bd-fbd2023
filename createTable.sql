@@ -20,8 +20,6 @@ create table if not exists developers (
 	id int auto_increment primary key,
 	nome varchar(50) not null,
 	email varchar(50) unique not null,
-    enterpriseId integer not null,
-    foreign key (enterpriseId) references enterprises(id)
 );
 create table if not exists developersInfo (
 	id int auto_increment primary key,
@@ -32,9 +30,9 @@ create table if not exists developersInfo (
 );
 create table if not exists projects (
 	id int auto_increment primary key,
-	nome varchar(50) not null,
-	descript varchar(50),
-	repository varchar(50) not null, 
+	nome varchar(100) not null,
+	descript varchar(200),
+	repository varchar(200) not null, 
 	developerId integer not null,
 	foreign key (developerId) references developers(id)
 );
@@ -46,3 +44,4 @@ create table if not exists projectsTechnologies(
 	foreign key (technologyId) references technologies(id) on delete cascade,
 	foreign key (projectId) references projects(id) on delete cascade
 );
+
