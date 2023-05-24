@@ -1,27 +1,4 @@
 /*DELETE DAS TABELAS*/
-/*TECHNOLOGIEs*/
-/*delete*/
-DELETE FROM technologies
-WHERE id = 8;
-
-/*selecao do dado atualizado*/
-select * from technologies;
-
-/*ENTERPRISES*/
-/*delete*/
-DELETE FROM enterprises
-WHERE id = 7;
-
-/*selecao do dado atualizado*/
-select * from enterprises;
-
-/*DEVELOPERS*/
-/*delete*/
-DELETE FROM developers
-WHERE id = 5;
-
-/*selecao do dado atualizado*/
-select * from developers;
 
 /*DEVELOPERSINFO*/
 /*delete*/
@@ -31,6 +8,30 @@ WHERE id = 7;
 /*selecao do dado atualizado*/
 select * from developersInfo;
 
+/*PROJECTSTECHNOLOGIE*/
+/*delete*/
+DELETE FROM projectsTechnologie
+WHERE id = 1;
+
+/*selecao do dado atualizado*/
+select * from projectsTechnologie;
+
+/*ENTERPRISES*/
+/*delete*/
+DELETE FROM enterprises
+WHERE id = 7;
+
+/*selecao do dado atualizado*/
+select * from enterprises;
+
+/*TECHNOLOGIEs*/
+/*delete*/
+DELETE FROM technologies
+WHERE id = 8;
+
+/*selecao do dado atualizado*/
+select * from technologies;
+
 /*PROJECTS*/
 /*delete*/
 DELETE FROM projects
@@ -39,10 +40,13 @@ WHERE id = 7;
 /*selecao do dado atualizado*/
 select * from projects;
 
-/*PROJECTSTECHNOLOGIE*/
+/*DEVELOPERS*/
 /*delete*/
-DELETE FROM projectsTechnologie
-WHERE id = 1;
+DELETE FROM developers
+WHERE id = 5;
 
 /*selecao do dado atualizado*/
-select * from projectsTechnologie;
+select * from developers;
+
+
+
