@@ -1,0 +1,30 @@
+/* ex 1: Selecione as primeiras 100 linhas da tabela*/
+select id, nome from pessoa where id < 101;
+/* 2 *: Selecione as primeiras 200 linhas da tabela, retornando os dados da seguinte forma, ordenado pelo nome:*/ 
+select p.id, p.nome , p.telefone 'contato', p.email from pessoa p where id < 201;
+/* 3  Selecione todas as mulheres, calculando a idade em anos e ordene da mais velha para a mais nova.*/
+select id, nome, data_Nascimento from pessoa where sexo = "Female" order by data_Nascimento ASC;
+/* 4: Selecione todos os homens, calculando a idade em anos e ordene do mais novo para o mais velho.*/
+select id, nome, data_Nascimento from pessoa where sexo = "Male" order by data_Nascimento DESC;
+/*5 O departamento de TI deseja saber qual o domínio dos e-mails de todas as pessoas que exercem cargo de chefia*/
+select id, nome, email, chefia from pessoa where chefia = true;
+/*6 Selecione todas as mulheres que ganham mais que U$ 5.000,00 com idade superior a 20 anos.*/
+select id, nome, salario from pessoa where sexo = "Female" AND salario > 5000.00;
+/*7 Selecione todos homens que ganham mais que U$ 5.000,00 com idade entre 30 e 40 anos.*/
+select id, nome, year(now())-year(data_Nascimento) idade from pessoa where sexo = "Male" AND salario > 5000.00 AND year(now())-year(data_Nascimento) > 30 and  year(now())-year(data_Nascimento) < 40;
+/*8 Selecione o menor salário entre as mulheres	*/
+select id, nome, salario from pessoa where sexo = "Female" order by salario ASC;
+/*9 Selecione o menor salário entre as mulheres que exercem cargo de chefia com idade maior que 40 anos*/
+select MIN(salario) salario from pessoa where sexo = "Female" and year(now())-year(data_Nascimento) > 40;
+/*10Selecione a média salarial dos homens */
+select avg(salario) as salario from pessoa where sexo = "Male";
+/*11 Selecione a média salarial das mulheres*/
+ select avg(salario) as salario from pessoa where sexo = "Female";
+ /*12 Selecione a média salarial entre homens e mulheres nascidos na década de 80.*/
+select avg(salario) salario from pessoa where year(now())-year(data_Nascimento) > 43;
+/*13 Quantos homens nasceram em Abril de 1975 e ocupam função de chefia?*/
+select nome, chefia from pessoa where chefia=true and year(data_Nascimento) = 1975 and month(data_Nascimento)=04;
+/*14 Quantas mulheres ganham mais que U$ 5.000 e que nasceram no mês de julho */
+select nome, salario from pessoa where salario>5000.00 and sexo = "Female" and month(data_Nascimento)=07;
+/*15 Selecione o maior salário entre homens e mulheres que nasceram após os anos 2000*/
+select nome, salario from pessoa where salario>5000.00 and year(data_Nascimento)>2000;
